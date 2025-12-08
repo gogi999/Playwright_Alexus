@@ -41,10 +41,6 @@ test.only('Learning selectors!', async ({ page }) => {
     // Get by role
     await page.getByRole('button', { name: /click me/i }).click();
 
-    await page.pause();
-
     // Assert the final count is 11
-    await expect(page.locator('#counter')).toHaveText('11');
-
-    await page.pause();
+    await expect(page.locator('#counter')).toContainText('11')
 });

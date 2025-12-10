@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test.describe.only('Learning assertions!', () => {
-    test('Verify web page behavior', async ({ page }) => {
+test.describe('Learning assertions! @assertions_group', () => {
+    test('Verify web page behavior @smoke', async ({ page }) => {
         // Navigate to the desired web page
         await page.goto('https://the-internet.herokuapp.com/');
 
